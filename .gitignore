@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generator
+src/**/*.generated.tsx
+src/**/*.generated.ts
+src/Generate/generate.ts
