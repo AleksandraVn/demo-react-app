@@ -29,35 +29,35 @@ export const Header = () => {
                         <Button
                             key={"Buchung"}
                             onClick={() => console.log("Buchung")}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
+                            sx={{ my: 2, color: 'black', display: 'block' }}
                         >
                             {"Buchung"}
                         </Button>
                         <Button
                             key={"Blog"}
                             onClick={() => console.log("Blog")}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
+                            sx={{ my: 2, color: 'black', display: 'block' }}
                         >
                             {"Blog"}
                         </Button>
                         <Button
                             key={"Quiz"}
                             onClick={() => console.log("Quiz")}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
+                            sx={{ my: 2, color: 'black', display: 'block' }}
                         >
                             {"Quiz"}
                         </Button>
                         <Button
                             key={"Unsere Ziele"}
                             onClick={() => console.log("Unsere Ziele")}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
+                            sx={{ my: 2, color: 'black', display: 'block' }}
                         >
                             {"Unsere Ziele"}
                         </Button>
                         <Button
                             key={"Partner"}
                             onClick={() => console.log("Partner")}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
+                            sx={{ my: 2, color: 'black', display: 'block' }}
                         >
                             {"Partner"}
                         </Button>
