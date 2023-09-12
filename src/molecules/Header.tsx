@@ -10,7 +10,7 @@ export const Header = () => {
 
     return (
         <AppBar
-            position={"static"}
+            position={"sticky"}
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
