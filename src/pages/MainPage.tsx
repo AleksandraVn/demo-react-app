@@ -8,6 +8,7 @@ export const MainPage = () => {
         <>
             <Grid
                 container
+                data-testid={"container"}
                 direction={"column"}
                 flexDirection={"column"}
                 minWidth={"100%"}
