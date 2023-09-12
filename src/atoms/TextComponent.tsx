@@ -1,5 +1,5 @@
 import React from "react";
-import {Typography} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 
 interface Props {
     text: string
@@ -11,10 +11,15 @@ export const TextComponent = (props: Props) => {
     } = props;
 
     return (
-        <Typography
-            variant={"body1"}
-        >
-            {text}
-        </Typography>
+        <Box sx={{ width: "100%" }}>
+            <Typography
+                variant={"body1"}
+                color={"common.black"}
+                gutterBottom
+                style={{ whiteSpace: "pre-line" }}
+            >
+                {text}
+            </Typography>
+        </Box>
     );
 }

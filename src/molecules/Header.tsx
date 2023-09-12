@@ -1,7 +1,13 @@
 import React from "react";
 import {AppBar, Box, Button, Container, Toolbar, Typography} from "@mui/material";
+import {useNavigateToStartPage} from "../pages/StartPage/StartPage.navigate.generated.tsx";
+import {useNavigateToBlogPage} from "../pages/BlogPage/BlogPage.navigate.generated.tsx";
 
 export const Header = () => {
+
+    const showHome = useNavigateToStartPage();
+    const showBlog = useNavigateToBlogPage();
+
     return (
         <AppBar
             position={"static"}
@@ -11,8 +17,7 @@ export const Header = () => {
                     <Typography
                         variant="h6"
                         noWrap
-                        component="a"
-                        href="/"
+                        onClick={showHome}
                         sx={{
                             mr: 2,
                             display: { xs: 'none', md: 'flex' },
@@ -35,7 +40,7 @@ export const Header = () => {
                         </Button>
                         <Button
                             key={"Blog"}
-                            onClick={() => console.log("Blog")}
+                            onClick={showBlog}
                             sx={{ my: 2, color: 'black', display: 'block' }}
                         >
                             {"Blog"}

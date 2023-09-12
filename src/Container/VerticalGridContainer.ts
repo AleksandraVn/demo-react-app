@@ -4,7 +4,8 @@ import {Grid} from "@mui/material";
 export const VerticalGridContainer = Container(
     Atom(Grid, {
         container: true,
-        direction: "column"
+        direction: "column",
+        spacing: 4,
     }),
     Atom(Grid, {
         item: true,
