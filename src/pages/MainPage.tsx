@@ -10,37 +10,14 @@ import "../Router/Registry";
 export const MainPage = () => {
     return (
         <>
-            <Grid
-                container
-                data-testid={"container"}
-                direction={"column"}
-                flexDirection={"column"}
-                minWidth={"100%"}
-            >
-                <Grid
-                    item
-                    xs={12}
-                >
-                    <Header/>
-                </Grid>
-                <Grid
-                    item
-                    xs={12}
-                >
-                    <div style={{ margin: 20, padding: 40 }}>
-                        <Routes>
-                            {RouterRegistry.getAll()}
-                            <Route path="/" element={<NavigateToStartPage/>}/>
-                        </Routes>
-                    </div>
-                </Grid>
-                <Grid
-                    item
-                    xs={12}
-                >
-                    <Footer/>
-                </Grid>
-            </Grid>
+            <Header/>
+            <div style={{margin: 20, padding: 40}}>
+                <Routes>
+                    {RouterRegistry.getAll()}
+                    <Route path="/" element={<NavigateToStartPage/>}/>
+                </Routes>
+            </div>
+            <Footer/>
         </>
     );
 }
