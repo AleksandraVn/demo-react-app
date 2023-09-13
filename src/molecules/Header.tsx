@@ -12,7 +12,7 @@ export const Header = () => {
     return (
         <AppBar
             position={"sticky"}
-            color={"transparent"}
+            color={"secondary"}
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
