@@ -1,7 +1,8 @@
 import React from "react";
-import {AppBar, Box, Button, Container, Paper, Toolbar} from "@mui/material";
+import {AppBar, Box, Button, Container, Toolbar} from "@mui/material";
 import {useNavigateToStartPage} from "../pages/StartPage/StartPage.navigate.generated.tsx";
 import {useNavigateToBlogPage} from "../pages/BlogPage/BlogPage.navigate.generated.tsx";
+import {ImageView} from "../atoms/ImageView.tsx";
 
 export const Header = () => {
 
@@ -17,10 +18,16 @@ export const Header = () => {
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Paper variant="outlined">
-                        <img src={"logo.png"} alt={"logo"} height={"80"} onClick={showHome}/>
-                    </Paper>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Button
+                        onClick={showHome}
+                    >
+                        <ImageView
+                            height={"100px"}
+                            width={"150px"}
+                            image={"Logo.png"}
+                        />
+                    </Button>
+                    <Box alignItems={"space-evenly"} sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         <Button
                             key={"Buchung"}
                             onClick={() => console.log("Buchung")}

@@ -9,6 +9,10 @@ export const getTheme = (mode: PaletteMode = "light"): ThemeOptions => {
             dark: "#0288D1",
             contrastText: "#fff",
         },
+        secondary: {
+            main: "#ffffff",
+            dark: "rgba(0,0,0,1)"
+        }
     };
 
     return {

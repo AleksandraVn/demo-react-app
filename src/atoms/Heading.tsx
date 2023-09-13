@@ -2,6 +2,7 @@ import React from "react";
 import {Box, Typography} from "@mui/material";
 
 interface Props {
+    variant?: "h3" | "h4" | "h6"
     text: string
     center?: boolean
 }
@@ -9,32 +10,14 @@ interface Props {
 export const Heading = (props: Props) => {
     const {
         text,
-        center
+        center,
+        variant
     } = props;
 
     return (
         <Box>
             <Typography
-                variant={"h4"}
-                align={(center ?? true) ? "center" : "left"}
-                color={"common.black"}
-            >
-                {text}
-            </Typography>
-        </Box>
-    );
-}
-
-export const SubHeading = (props: Props) => {
-    const {
-        text,
-        center
-    } = props;
-
-    return (
-        <Box>
-            <Typography
-                variant={"h6"}
+                variant={variant ?? "h4"}
                 align={(center ?? true) ? "center" : "left"}
                 color={"common.black"}
             >
