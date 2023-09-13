@@ -11,7 +11,7 @@ export const getTheme = (mode: PaletteMode = "light"): ThemeOptions => {
         },
         secondary: {
             main: "#ffffff",
-            dark: "rgba(0,0,0,0)"
+            dark: "rgba(0,0,0,1)"
         }
     };
 

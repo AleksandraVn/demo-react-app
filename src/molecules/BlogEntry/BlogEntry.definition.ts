@@ -2,7 +2,7 @@ import {Atom, Molecule, Property, UiContainer} from "@svendeichsel/route-gen";
 import {HorizontalGridContainer} from "../../Container/HorizontalGridContainer";
 import {ImageView} from "../../atoms/ImageView";
 import {VerticalGridContainer} from "../../Container/VerticalGridContainer";
-import {SubHeading} from "../../atoms/Heading";
+import {Heading} from "../../atoms/Heading";
 import {TextComponent} from "../../atoms/TextComponent";
 import {Grid} from "@mui/material";
 
@@ -36,7 +36,8 @@ export const BlogEntryDefinition = Molecule(
                     UiContainer(
                         VerticalGridContainer,
                         [
-                            Atom(SubHeading, {
+                            Atom(Heading, {
+                                variant: "h6",
                                 text: Property("heading", "string"),
                                 center: false,
                             }),
