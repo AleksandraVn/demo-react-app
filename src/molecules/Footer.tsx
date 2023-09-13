@@ -1,4 +1,32 @@
 import React from "react";
+import {Box, Grid, Typography} from "@mui/material";
+
 export const Footer = () => {
-    return <>Footer</>
+    return <Box
+        sx={{
+            backgroundColor: "#5aa5d1",
+            py: 3,
+            px: 2,
+            mt: 'auto',
+        }}
+        component="footer"
+    >
+        <Grid container
+              direction="row"
+              justifyContent="flex-end"
+              alignItems="center" spacing={4}>
+            <Grid item>
+                <Typography variant="h6" color="#fff" align="center">
+                    Kontakt
+                </Typography>
+            </Grid>
+            <Grid item style={{
+                marginRight: "200px"
+            }}>
+                <Typography variant="h6" color="#fff" align="center">
+                    Impressum
+                </Typography>
+            </Grid>
+        </Grid>
+    </Box>
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import {AppBar, Box, Button, Container, Toolbar, Typography} from "@mui/material";
+import {AppBar, Box, Button, Container, Paper, Toolbar} from "@mui/material";
 import {useNavigateToStartPage} from "../pages/StartPage/StartPage.navigate.generated.tsx";
 import {useNavigateToBlogPage} from "../pages/BlogPage/BlogPage.navigate.generated.tsx";
 
@@ -11,25 +11,15 @@ export const Header = () => {
     return (
         <AppBar
             position={"sticky"}
+            style={{
+                backgroundColor: "whitesmoke"
+            }}
         >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        onClick={showHome}
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
+                    <Paper variant="outlined">
+                        <img src={"logo.png"} alt={"logo"} height={"80"} onClick={showHome}/>
+                    </Paper>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         <Button
                             key={"Buchung"}
