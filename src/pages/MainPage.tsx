@@ -8,15 +8,19 @@ import "../Router/Registry";
 
 export const MainPage = () => {
     return (
-        <>
-            <Header/>
-            <div style={{margin: 20, padding: 40, height:"100vh"}}>
+        <div style={{ display: "flex", flexFlow: "column", height: "100vh"}}>
+            <div style={{flex: "0 1 auto"}}>
+                <Header/>
+            </div>
+            <div style={{flex: "1 1 auto"}}>
                 <Routes>
                     {RouterRegistry.getAll()}
                     <Route path="/" element={<NavigateToStartPage/>}/>
                 </Routes>
             </div>
-            <Footer/>
-        </>
+            <div style={{flex: "0 1 auto"}}>
+                <Footer/>
+            </div>
+        </div>
     );
 }

@@ -1,10 +1,11 @@
-import {Atom, Molecule, Property, UiContainer} from "@svendeichsel/route-gen";
+import {Atom, EmptyAtom, Molecule, Property, UiContainer} from "@svendeichsel/route-gen";
 import {HorizontalGridContainer} from "../../Container/HorizontalGridContainer";
 import {ImageView} from "../../atoms/ImageView";
 import {VerticalGridContainer} from "../../Container/VerticalGridContainer";
 import {Heading} from "../../atoms/Heading";
 import {TextComponent} from "../../atoms/TextComponent";
 import {Grid} from "@mui/material";
+import {ContentView} from "../../atoms/ContentView";
 
 
 export const BlogEntryDefinition = Molecule(
@@ -34,19 +35,25 @@ export const BlogEntryDefinition = Molecule(
                     })
                 }, [
                     UiContainer(
-                        VerticalGridContainer,
+                        {
+                            container: EmptyAtom(ContentView)
+                        },
                         [
-                            Atom(Heading, {
-                                variant: "h6",
-                                text: Property("heading", "string"),
-                                center: false,
-                            }),
-                            Atom(TextComponent, {
-                                text: Property("text", "string"),
-                                center: false,
-                            }),
-                        ]
-                    )
+                            UiContainer(
+                                VerticalGridContainer,
+                                [
+                                    Atom(Heading, {
+                                        variant: "h6",
+                                        text: Property("heading", "string"),
+                                        center: false,
+                                    }),
+                                    Atom(TextComponent, {
+                                        text: Property("text", "string"),
+                                        center: false,
+                                    }),
+                                ]
+                            )
+                        ])
                 ]),
             ]
         )
