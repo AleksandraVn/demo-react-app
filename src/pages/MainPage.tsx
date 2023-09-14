@@ -5,19 +5,22 @@ import {Route, Routes} from "react-router-dom";
 import React from "react";
 import {NavigateToStartPage} from "./StartPage/StartPage.navigate.generated.tsx";
 import "../Router/Registry";
-import {Container} from "@mui/material";
 
 export const MainPage = () => {
     return (
-        <Container maxWidth={false} disableGutters>
-            <Header/>
-            <div style={{margin: 20, padding: 40}}>
+        <div style={{ display: "flex", flexFlow: "column", height: "100vh"}}>
+            <div style={{flex: "0 1 auto"}}>
+                <Header/>
+            </div>
+            <div style={{flex: "1 1 auto"}}>
                 <Routes>
                     {RouterRegistry.getAll()}
                     <Route path="/" element={<NavigateToStartPage/>}/>
                 </Routes>
             </div>
-            <Footer/>
-        </Container>
+            <div style={{flex: "0 1 auto"}}>
+                <Footer/>
+            </div>
+        </div>
     );
 }
