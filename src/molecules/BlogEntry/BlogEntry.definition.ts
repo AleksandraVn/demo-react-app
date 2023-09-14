@@ -43,9 +43,11 @@ export const BlogEntryDefinition = Molecule(
                                 VerticalGridContainer,
                                 [
                                     Atom(Heading, {
-                                        variant: "h6",
+                                        variant: "h5",
                                         text: Property("heading", "string"),
                                         center: false,
+                                        color: "#2D4291",
+                                        isBold: true
                                     }),
                                     Atom(TextComponent, {
                                         text: Property("text", "string"),

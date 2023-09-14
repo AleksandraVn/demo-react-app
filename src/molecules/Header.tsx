@@ -14,7 +14,7 @@ export const Header = () => {
         <AppBar
             position={"sticky"}
             style={{
-                backgroundColor: "whitesmoke"
+                backgroundColor: "#F8FBFC"
             }}
         >
             <Container maxWidth="xl">
@@ -24,13 +24,14 @@ export const Header = () => {
                             position: "absolute",
                             top: "0%",
                             left: "5%",
+                            boxShadow: "rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px"
                         }}
                         onClick={showHome}
                     >
                         <ImageView
                             height={"120px"}
                             width={"180px"}
-                            image={"logo.png"}
+                            image={"Logo.png"}
                         />
                     </Button>
                     <Box paddingX={"100px"} marginLeft={"250px"} sx={{

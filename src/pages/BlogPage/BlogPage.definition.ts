@@ -26,6 +26,8 @@ export const BlogPageDefinition = Molecule(
                     [
                         Atom(Heading, {
                             text: messages.get("title"),
+                            color: "#2D4291",
+                            isBold: true
                         }),
                         Atom(BlogEntry, {
                             image: "2.png",

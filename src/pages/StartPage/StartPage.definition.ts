@@ -26,7 +26,8 @@ export const StartPageDefinition = Molecule(
                     [
                         Atom(Heading, {
                             text: messages.get("title"),
-                            color: "#3047b0"
+                            color: "#2D4291",
+                            isBold: true
                         }),
                         Atom(TextComponent, {
                             text: messages.get("text"),

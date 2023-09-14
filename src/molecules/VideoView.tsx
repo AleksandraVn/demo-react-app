@@ -40,7 +40,7 @@ export const VideoView = (props: Props) => {
                     padding: "20px",
                 }}
             >
-                <Heading variant={"h3"} text={heading1} color={"#3047b0"}/>
+                <Heading variant={"h3"} text={heading1} color={"#2D4291"} isBold={true}/>
             </div>
             <div
                 style={{
@@ -49,10 +49,10 @@ export const VideoView = (props: Props) => {
                     left: "30%",
                     color: "black",
                     backgroundColor: "rgba(255,255,255,0.5)",
-                    padding: "20px"
+                    padding: "20px",
                 }}
             >
-                <Heading variant={"h3"} text={heading2} color={"#3047b0"}/>
+                <Heading variant={"h3"} text={heading2} color={"#2D4291"} isBold={true}/>
             </div>
         </Card>
     );

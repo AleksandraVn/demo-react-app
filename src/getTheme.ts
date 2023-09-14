@@ -56,18 +56,21 @@ export const getTheme = (mode: PaletteMode = "light"): ThemeOptions => {
                 "@media (max-width:600px)": {
                     fontSize: "1.4rem",
                 },
+                fontFamily: "Comic Sans MS, serif"
             },
             h4: {
                 fontSize: "1.4rem",
                 "@media (max-width:600px)": {
                     fontSize: "1.3rem",
                 },
+                fontFamily: "Comic Sans MS, serif"
             },
             h5: {
                 fontSize: "1.2rem",
                 "@media (max-width:600px)": {
                     fontSize: "1.2rem",
                 },
+                fontFamily: "Comic Sans MS, serif"
             },
             h6: {
                 fontSize: "1.1rem",
