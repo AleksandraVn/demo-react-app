@@ -5,13 +5,15 @@ interface Props {
     variant?: "h3" | "h4" | "h6"
     text: string
     center?: boolean
+    color?: string
 }
 
 export const Heading = (props: Props) => {
     const {
         text,
         center,
-        variant
+        variant,
+        color
     } = props;
 
     return (
@@ -19,7 +21,7 @@ export const Heading = (props: Props) => {
             <Typography
                 variant={variant ?? "h4"}
                 align={(center ?? true) ? "center" : "left"}
-                color={"common.black"}
+                color={(color) ? color : "common.black"}
             >
                 {text}
             </Typography>

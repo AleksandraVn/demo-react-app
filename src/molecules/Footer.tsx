@@ -8,6 +8,7 @@ export const Footer = () => {
             py: 3,
             px: 2,
             mt: 'auto',
+            position: "static"
         }}
         component="footer"
     >
