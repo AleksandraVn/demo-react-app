@@ -6,57 +6,55 @@ import {Heading} from "../../atoms/Heading";
 import {TextComponent} from "../../atoms/TextComponent";
 import {Grid} from "@mui/material";
 import {ContentView} from "../../atoms/ContentView";
+import {Wrapper} from "../../Generate/Wrapper";
 
 
 export const BlogEntryDefinition = Molecule(
     "BlogEntry",
     [
-        UiContainer(
-            {
-                container: HorizontalGridContainer.container,
-            },
+        Wrapper(HorizontalGridContainer.container,
             [
-                UiContainer({
-                    container: Atom(Grid, {
+                Wrapper(
+                    Atom(Grid, {
                         item: true,
                         xs: 3,
-                    })
-                }, [
-                    Atom(ImageView, {
-                        height: "200",
-                        width: "200",
-                        image: Property("image", "string"),
-                    })
-                ]),
-                UiContainer({
-                    container: Atom(Grid, {
+                    }),
+                    [
+                        Atom(ImageView, {
+                            height: "200",
+                            width: "200",
+                            image: Property("image", "string"),
+                        })
+                    ]),
+                Wrapper(
+                    Atom(Grid, {
                         item: true,
                         xs: 9,
-                    })
-                }, [
-                    UiContainer(
-                        {
-                            container: EmptyAtom(ContentView)
-                        },
-                        [
-                            UiContainer(
-                                VerticalGridContainer,
-                                [
-                                    Atom(Heading, {
-                                        variant: "h5",
-                                        text: Property("heading", "string"),
-                                        center: false,
-                                        color: "#2D4291",
-                                        isBold: true
-                                    }),
-                                    Atom(TextComponent, {
-                                        text: Property("text", "string"),
-                                        center: false,
-                                    }),
-                                ]
-                            )
-                        ])
-                ]),
+                    }),
+                    [
+                        Wrapper(
+                            EmptyAtom(ContentView),
+                            [
+                                UiContainer(
+                                    VerticalGridContainer,
+                                    [
+                                        Atom(Heading, {
+                                            variant: "h5",
+                                            text: Property("heading", "string"),
+                                            center: false,
+                                            color: "#2D4291",
+                                            isBold: true
+                                        }),
+                                        Atom(TextComponent, {
+                                            text: Property("text", "string"),
+                                            center: false,
+                                        }),
+                                    ]
+                                )
+                            ]
+                        )
+                    ]
+                ),
             ]
         )
     ],

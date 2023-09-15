@@ -5,6 +5,7 @@ import {useBlogPageMessages} from "../../messages/BlogPageMessages";
 import {ImageView} from "../../atoms/ImageView";
 import {BlogEntry} from "../../molecules/BlogEntry/BlogEntry.generated";
 import {ContentView} from "../../atoms/ContentView";
+import {Wrapper} from "../../Generate/Wrapper";
 
 const messages = HookWithPropsInput(useBlogPageMessages);
 
@@ -16,10 +17,8 @@ export const BlogPageDefinition = Molecule(
             width: "100%",
             image: "1.png",
         }),
-        UiContainer(
-            {
-                container: EmptyAtom(ContentView)
-            },
+        Wrapper(
+            EmptyAtom(ContentView),
             [
                 UiContainer(
                     VerticalGridContainer,

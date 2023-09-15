@@ -12,7 +12,7 @@ export const MainPage = () => {
             <div style={{flex: "0 1 auto"}}>
                 <Header/>
             </div>
-            <div style={{flex: "1 1 auto"}}>
+            <div style={{flex: "1 1 auto", overflowY: "scroll"}}>
                 <Routes>
                     {RouterRegistry.getAll()}
                     <Route path="/" element={<NavigateToStartPage/>}/>

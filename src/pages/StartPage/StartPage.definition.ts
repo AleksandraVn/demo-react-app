@@ -5,6 +5,7 @@ import {VerticalGridContainer} from "../../Container/VerticalGridContainer";
 import {TextComponent} from "../../atoms/TextComponent";
 import {VideoView} from "../../molecules/VideoView";
 import {ContentView} from "../../atoms/ContentView";
+import {Wrapper} from "../../Generate/Wrapper";
 
 
 const messages = HookWithPropsInput(useStartPageMessages);
@@ -16,10 +17,8 @@ export const StartPageDefinition = Molecule(
             heading1: messages.get("imageTitle1"),
             heading2: messages.get("imageTitle2"),
         }),
-        UiContainer(
-            {
-                container: EmptyAtom(ContentView)
-            },
+        Wrapper(
+            EmptyAtom(ContentView),
             [
                 UiContainer(
                     VerticalGridContainer,
