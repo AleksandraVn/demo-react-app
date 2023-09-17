@@ -4,11 +4,13 @@ import {useNavigateToStartPage} from "../pages/StartPage/StartPage.navigate.gene
 import {useNavigateToBlogPage} from "../pages/BlogPage/BlogPage.navigate.generated.tsx";
 import {ImageView} from "../atoms/ImageView.tsx";
 import {HeaderButton} from "../atoms/HeaderButton.tsx";
+import {useNavigateToGoalsPage} from "../pages/GoalsPage/GoalsPage.navigate.generated.tsx";
 
 export const Header = () => {
 
     const showHome = useNavigateToStartPage();
     const showBlog = useNavigateToBlogPage();
+    const showGoals = useNavigateToGoalsPage();
 
     return (
         <AppBar
@@ -43,7 +45,7 @@ export const Header = () => {
                         <HeaderButton title={"Buchung"}/>
                         <HeaderButton title={"Blog"} onClick={showBlog}/>
                         <HeaderButton title={"Quiz"}/>
-                        <HeaderButton title={"Unsere Ziele"}/>
+                        <HeaderButton title={"Unsere Ziele"} onClick={showGoals}/>
                         <HeaderButton title={"Partner"}/>
                     </Box>
                 </Toolbar>
