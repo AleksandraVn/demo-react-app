@@ -1,4 +1,4 @@
-import {Atom, EmptyAtom, Molecule} from "@svendeichsel/route-gen";
+import {EmptyAtom, Molecule} from "@svendeichsel/route-gen";
 import {ItemsList} from "../../molecules/ItemsLIst/ItemsList.generated";
 import {Wrapper} from "../../Generate/Wrapper";
 import {ContentView} from "../../atoms/ContentView";

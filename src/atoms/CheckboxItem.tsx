@@ -1,6 +1,5 @@
 import React from "react";
 import {Checkbox, Grid, Typography} from "@mui/material";
-import {VerticalGridContainer} from "../Container/VerticalGridContainer.ts";
 
 interface Props {
     description: string
