@@ -10,3 +10,14 @@ export const HorizontalGridContainer = Container(
         item: true,
     })
 );
+
+export const HorizontalGridContainerCentred = Container(
+    Atom(Grid, {
+        container: true,
+        direction: "row",
+        justifyContent: "center"
+    }),
+    Atom(Grid, {
+        item: true,
+    })
+);
