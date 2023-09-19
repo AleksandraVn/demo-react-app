@@ -12,7 +12,7 @@ export const CheckboxItem = (props: Props) => {
     const {description, onCLick, index} = props;
 
     return (
-        <Grid container justifyContent={"center"} alignItems={"center"}>
+        <Grid container justifyContent={"left"} alignItems={"center"}>
             <Grid item>
                 <Checkbox size={"medium"} onClick={() => onCLick(index)}/>
             </Grid>

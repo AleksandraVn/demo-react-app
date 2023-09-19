@@ -1,4 +1,4 @@
-import {Atom, EmptyAtom, HookWithPropsInput, Molecule, UiContainer} from "@svendeichsel/route-gen";
+import {Atom, HookWithPropsInput, Molecule, UiContainer} from "@svendeichsel/route-gen";
 import {Heading} from "../../atoms/Heading";
 import {useStartPageMessages} from "../../messages/StartPageMessages";
 import {VerticalGridContainer} from "../../Container/VerticalGridContainer";
@@ -18,7 +18,7 @@ export const StartPageDefinition = Molecule(
             heading2: messages.get("imageTitle2"),
         }),
         Wrapper(
-            EmptyAtom(ContentView),
+            Atom(ContentView, {}),
             [
                 UiContainer(
                     VerticalGridContainer,

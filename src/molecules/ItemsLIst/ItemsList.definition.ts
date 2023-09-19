@@ -5,6 +5,7 @@ import {useGoalsPageMessages} from "../../messages/GoalsPageMessages";
 import {ImageView} from "../../atoms/ImageView";
 import {useCheckList} from "../../hooks/useCheckList.hooks";
 import {HorizontalGridContainerCentred} from "../../Container/HorizontalGridContainer";
+import {ContentView} from "../../atoms/ContentView";
 
 const messages = HookWithPropsInput(useGoalsPageMessages);
 
@@ -69,5 +70,11 @@ export const ItemsListDefinition = Molecule(
     ],
     {
         routing: false,
+        container: {
+            container: Atom(ContentView, {
+                marginX: "200px",
+                marginY: "8px",
+            })
+        }
     }
 );

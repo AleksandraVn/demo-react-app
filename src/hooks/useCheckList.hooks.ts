@@ -1,22 +1,23 @@
-import {useState} from "react";
+import {useCallback, useMemo, useState} from "react";
 
 export const useCheckList = () => {
 
-    const onCheckboxClick = (index: number) => {
-        if(checkedItems.length < 4 && !checkedItems.includes(index)) {
-            const result = [
-                ...checkedItems
-            ];
-            result.push(index);
-            setCheckedItems(result);
-            if(result.length == 4) {
-                setShowMeme(true);
-            }
-        }
-    }
-
-    const [showMeme, setShowMeme] = useState(false);
     const [checkedItems, setCheckedItems] = useState<number[]>([]);
+
+    const onCheckboxClick = useCallback((index: number) => {
+        if (checkedItems.includes(index)) {
+            setCheckedItems(pre => pre.filter(e => e !== index));
+        } else {
+            setCheckedItems(pre => [
+                ...pre,
+                index,
+            ]);
+        }
+    }, [checkedItems]);
+
+    const showMeme = useMemo(() => {
+        return checkedItems.length === 4;
+    }, [checkedItems]);
 
     return {
         onCheckboxClick,

@@ -1,4 +1,4 @@
-import {Atom, EmptyAtom, Molecule, Property, UiContainer} from "@svendeichsel/route-gen";
+import {Atom, Molecule, Property, UiContainer} from "@svendeichsel/route-gen";
 import {HorizontalGridContainer} from "../../Container/HorizontalGridContainer";
 import {ImageView} from "../../atoms/ImageView";
 import {VerticalGridContainer} from "../../Container/VerticalGridContainer";
@@ -33,7 +33,7 @@ export const BlogEntryDefinition = Molecule(
                     }),
                     [
                         Wrapper(
-                            EmptyAtom(ContentView),
+                            Atom(ContentView, {}),
                             [
                                 UiContainer(
                                     VerticalGridContainer,
