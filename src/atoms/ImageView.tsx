@@ -1,10 +1,12 @@
 import {CardMedia} from "@mui/material";
 import React from "react";
 
+type Images = "1.png" | "2.png" | "3.png" | "4.png" | "Logo.png" | "Developer-Summit.jpg";
+
 interface Props {
     height: string,
     width: string,
-    image: string,
+    image: Images,
 }
 
 export const ImageView = (props: Props) => {
