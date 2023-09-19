@@ -6,7 +6,7 @@ type Images = "1.png" | "2.png" | "3.png" | "4.png" | "Logo.png" | "Developer-Su
 interface Props {
     height: string,
     width: string,
-    image: Images,
+    image: Images | string,
 }
 
 export const ImageView = (props: Props) => {
