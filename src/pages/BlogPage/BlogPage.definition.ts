@@ -1,4 +1,4 @@
-import {Atom, EmptyAtom, HookWithPropsInput, Molecule, UiContainer} from "@svendeichsel/route-gen";
+import {Atom, HookWithPropsInput, Molecule, UiContainer} from "@svendeichsel/route-gen";
 import {VerticalGridContainer} from "../../Container/VerticalGridContainer";
 import {Heading} from "../../atoms/Heading";
 import {useBlogPageMessages} from "../../messages/BlogPageMessages";
@@ -18,7 +18,7 @@ export const BlogPageDefinition = Molecule(
             image: "1.png",
         }),
         Wrapper(
-            EmptyAtom(ContentView),
+            Atom(ContentView, {}),
             [
                 UiContainer(
                     VerticalGridContainer,

@@ -1,11 +1,16 @@
 import React from "react";
 import {Box} from "@mui/material";
 
+interface Props {
+    marginX?: string
+    marginY?: string
+}
 
-export const ContentView = (props?: React.PropsWithChildren) => {
+
+export const ContentView = (props: React.PropsWithChildren<Props>) => {
     return (
-        <Box marginX={"80px"} marginY={"8px"}>
-            {props?.children}
+        <Box marginX={props.marginX ?? "80px"} marginY={props.marginY ?? "8px"}>
+            {props.children}
         </Box>
     );
 }
