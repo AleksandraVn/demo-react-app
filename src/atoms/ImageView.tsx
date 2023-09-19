@@ -1,7 +1,7 @@
 import {CardMedia} from "@mui/material";
 import React from "react";
 
-type Images = "1.png" | "2.png" | "3.png" | "4.png" | "Logo.png" | "Developer-Summit.jpg";
+type Images = "1.png" | "2.png" | "3.png" | "4.png" | "Logo.png" | "Developer-Summit.jpg" | "meme.jpg";
 
 interface Props {
     height: string,
