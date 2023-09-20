@@ -4,12 +4,10 @@ import {useNavigateToStartPage} from "../pages/StartPage/StartPage.navigate.gene
 import {useNavigateToBlogPage} from "../pages/BlogPage/BlogPage.navigate.generated.tsx";
 import {ImageView} from "../atoms/ImageView.tsx";
 import {HeaderButton} from "../atoms/HeaderButton.tsx";
-
 export const Header = () => {
 
     const showHome = useNavigateToStartPage();
     const showBlog = useNavigateToBlogPage();
-
     return (
         <AppBar
             position={"sticky"}
